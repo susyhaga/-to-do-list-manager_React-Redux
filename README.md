@@ -7,13 +7,13 @@ This to-do list project enables users to effortlessly add, remove, edit, and cre
 * Remove existing tasks
 * Edit tasks
 * Storage in the browser's cache
-  
+
 ## Usage Instructions
 1. Clone the repository
 2. Install dependencies with `npm install`
 3. Start the application with `npm start`
 4. Access the application in your browser
-5. For production, use `npm run build`  
+5. For production, use `npm run build`
 
 ### `npm start`
 
