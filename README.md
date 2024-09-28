@@ -19,7 +19,7 @@ This to-do list project enables users to effortlessly add, remove, edit, and cre
 * [Redux](https://redux.js.org/)
 * [TypeScript](https://www.typescriptlang.org/)
 
-##Tools
+## Tools
 
 * useNavigate
 * createBrowserRouter
@@ -37,15 +37,9 @@ This to-do list project enables users to effortlessly add, remove, edit, and cre
 * useSelector
 * createSlice
 
-
-
 ## Styled
 
 styled-components
-
-## Usage Instructions
-1. Clone the repository
-2. Install dependencies with `npm install`
-3. Start the application with `npm start`
-4. Access the application in your browser
+## Contribution
+Feel free to open issues or pull requests!
 
