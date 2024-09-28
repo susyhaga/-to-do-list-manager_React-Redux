@@ -1,7 +1,8 @@
 # Getting Started with Create React App
 
 ## Description
-This to-do list project enables users to effortlessly add, remove, edit, and create new tasks. User modifications are permanently saved in the browser's cache, eliminating the need for an API or database. As a single-page application (SPA), it allows users to seamlessly navigate to a separate route for task registration, leading to significantly faster page loading times.
+This TO-DO-List manager project enables users to effortlessly add, remove, edit, classify and create new tasks. User modifications are permanently saved in the browser's cache, eliminating the need for an API or database. As a single-page application (SPA), it allows users to seamlessly navigate to a separate route for task registration, leading to significantly faster page loading times.
+
 ## Features
 * Add new tasks
 * Remove existing tasks
