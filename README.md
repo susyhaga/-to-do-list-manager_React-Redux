@@ -13,6 +13,7 @@ This to-do list project enables users to effortlessly add, remove, edit, and cre
 2. Install dependencies with `npm install`
 3. Start the application with `npm start`
 4. Access the application in your browser
+5for application production in  'npm run build'
 
 ## Technologies Used
 * [React](https://reactjs.org/)
@@ -21,7 +22,7 @@ This to-do list project enables users to effortlessly add, remove, edit, and cre
 
 ## Tools
 
-* useNavigate
+* useNaviga
 * createBrowserRouter
 * RouterProvider
 * Provider
