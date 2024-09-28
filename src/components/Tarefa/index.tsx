@@ -6,9 +6,10 @@ import TarefaClasse from '../../models/Tarefa'
 import { remover, editar, alteraStatus } from '../../store/slices/tarefa'
 import { Botao, BotaoSalvar } from '../../styles'
 
-type Props = TarefaClasse & { // Assegure-se de que 'TarefaClasse' tem todas as propriedades necessárias
-  descricaoOriginal?: string; // Adicionando ? para indicar que pode ser opcional
-};
+type Props = TarefaClasse & {
+  // Assegure-se de que 'TarefaClasse' tem todas as propriedades necessárias
+  descricaoOriginal?: string // Adicionando ? para indicar que pode ser opcional
+}
 
 const Tarefa = ({
   titulo,
@@ -18,33 +19,36 @@ const Tarefa = ({
   concluida,
   id
 }: Props) => {
-  const dispatch = useDispatch();
-  const [estaEditando, setEstaEditando] = useState(false);
-  const [descricao, setDescricao] = useState(descricaoOriginal);
-
+  const dispatch = useDispatch()
+  const [estaEditando, setEstaEditando] = useState(false)
+  const [descricao, setDescricao] = useState(descricaoOriginal)
 
   useEffect(() => {
-    setDescricao(descricaoOriginal);
-  }, [descricaoOriginal]);
+    setDescricao(descricaoOriginal)
+  }, [descricaoOriginal])
 
   const cancelarEdicao = useCallback(() => {
-    setEstaEditando(false);
-    setDescricao(descricaoOriginal);
-  }, [descricaoOriginal]);
+    setEstaEditando(false)
+    setDescricao(descricaoOriginal)
+  }, [descricaoOriginal])
 
-
-  const alterarStatusTarefa = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(alteraStatus({
-      id,
-      finalizado: e.target.checked,
-    }));
-  }, [dispatch, id]);
+  const alterarStatusTarefa = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      dispatch(
+        alteraStatus({
+          id,
+          finalizado: e.target.checked
+        })
+      )
+    },
+    [dispatch, id]
+  )
 
   return (
     <S.Card>
       <label htmlFor={titulo}>
         <input
-          type='checkbox'
+          type="checkbox"
           id={titulo}
           checked={status === enums.Status.CONCLUIDA}
           onChange={alterarStatusTarefa}
@@ -63,18 +67,31 @@ const Tarefa = ({
       <S.Descricao
         disabled={!estaEditando}
         value={descricao}
-        onChange={e => setDescricao(e.target.value)}
+        onChange={(e) => setDescricao(e.target.value)}
       />
       <S.BarraAcoes>
         {estaEditando ? (
           <>
-            <BotaoSalvar onClick={() => {
-              dispatch(editar({ descricao, concluida, prioridade, status, titulo, id }));
-              setEstaEditando(false);
-            }}>
+            <BotaoSalvar
+              onClick={() => {
+                dispatch(
+                  editar({
+                    descricao,
+                    concluida,
+                    prioridade,
+                    status,
+                    titulo,
+                    id
+                  })
+                )
+                setEstaEditando(false)
+              }}
+            >
               Salvar
             </BotaoSalvar>
-            <S.BotaoCancelarRemover onClick={cancelarEdicao}>Cancelar</S.BotaoCancelarRemover>
+            <S.BotaoCancelarRemover onClick={cancelarEdicao}>
+              Cancelar
+            </S.BotaoCancelarRemover>
           </>
         ) : (
           <>
@@ -86,7 +103,7 @@ const Tarefa = ({
         )}
       </S.BarraAcoes>
     </S.Card>
-  );
+  )
 }
 
-export default Tarefa;
+export default Tarefa

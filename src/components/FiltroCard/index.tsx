@@ -15,7 +15,6 @@ export type Props = {
 
 //3) inicio do FiltroCard +  Adicionar a prop Props
 const FiltroCard = ({ legenda, criterio, valor }: Props) => {
-
   const dispatch = useDispatch()
 
   //4) useSelector
@@ -34,10 +33,10 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
   const contarTarefas = () => {
     if (criterio === 'todas') return tarefas.itens.length
     if (criterio === 'prioridade') {
-      return tarefas.itens.filter(item => item.prioridade === valor).length
+      return tarefas.itens.filter((item) => item.prioridade === valor).length
     }
     if (criterio === 'status') {
-      return tarefas.itens.filter(item => item.status === valor).length
+      return tarefas.itens.filter((item) => item.status === valor).length
     }
   }
 
@@ -56,12 +55,11 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
 
   return (
     //2 usar estilo da ilha S nas tags + passar o valor da prop ATIVO
-    < S.Card ativo={ativo} onClick={filtrar} >
+    <S.Card ativo={ativo} onClick={filtrar}>
       <S.Contador>{contador}</S.Contador>
       <S.Label>{legenda}</S.Label>
-    </S.Card >
+    </S.Card>
   )
 }
 
 export default FiltroCard //  exportar para containers/BarraLateral
-

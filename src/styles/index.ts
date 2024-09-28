@@ -22,7 +22,7 @@ export const Container = styled.div`
 `
 //3)export para :  pages/Cadastro + containers/ListaDeTarefas
 export const MainContainer = styled.main`
-padding: 0 40px;
+  padding: 0 40px;
   flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
   gap: 16px;
   padding: 16px;
@@ -33,11 +33,11 @@ padding: 0 40px;
 `
 //3 export para: pages/Cadastro + containers/ListaDeTarefas
 export const Titulo = styled.h2`
-display: block;
-margin-top: 40px;
-margin-bottom: 40px;
-font-size: 18px;
-font-weight: bold;
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
 `
 // 4) Estilo dos INPUTs" usar nos containers em BarraLateral e Formulario
 export const Campo = styled.input`
@@ -50,19 +50,20 @@ export const Campo = styled.input`
   border: 1px solid #666666;
 `
 //5) botoes
-export const Botao = styled.button `
+export const Botao = styled.button`
   font-weight: bold;
   font-size: 12px;
   line-height: 14.06px;
-  color:#fff;
-  padding:8px 12px;
-  border:none;
-  cursor:pointer;
-  background: #2F3640;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  background: #2f3640;
   border-radius: 8px;
   margin-right: 8px;
 `
-export const BotaoSalvar =styled(Botao)`  // Botao = estilo do Botao de Tarefas
-background-color: ${varCores.verde};
+export const BotaoSalvar = styled(Botao)`
+  // Botao = estilo do Botao de Tarefas
+  background-color: ${varCores.verde};
 `
 export default EstiloGlobal //App.tsx

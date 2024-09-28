@@ -2,15 +2,16 @@ import styled from 'styled-components'
 
 //5  tipagem da prop ATIVO
 type Props = {
-  ativo:boolean
+  ativo: boolean
 }
 
 //1) div principal
-export const Card =styled.div<Props>` ///6)passar o tipagem aqui
-//4) uso da prop tipada ATIVO de index.tsx
-  border: 1px solid ${(props) => (props.ativo ?'#1E90FF' :'#a1a1a1' )};
-  background-color: ${(props) => (props.ativo ?'#ffff' :'fcfcfc' )};
-  color:${(props) => (props.ativo ? '#1E90FF' :'#5E5E5E')};
+export const Card = styled.div<Props>`
+  ///6)passar o tipagem aqui
+  //4) uso da prop tipada ATIVO de index.tsx
+  border: 1px solid ${(props) => (props.ativo ? '#1E90FF' : '#a1a1a1')};
+  background-color: ${(props) => (props.ativo ? '#ffff' : 'fcfcfc')};
+  color: ${(props) => (props.ativo ? '#1E90FF' : '#5E5E5E')};
   border-radius: 8px;
   width: 92px;
   height: 63px;
@@ -22,15 +23,14 @@ export const Card =styled.div<Props>` ///6)passar o tipagem aqui
 `
 
 //2) numero de tarefas
-export const Contador =styled.span`
+export const Contador = styled.span`
   font-weight: bold;
-  font-size:24px;
-  display:block;
-  margin:3px;
-
+  font-size: 24px;
+  display: block;
+  margin: 3px;
 `
 //3)texto do estado da tarefa
-export const Label =styled.span`
+export const Label = styled.span`
   font-family: Roboto;
   font-size: 14px;
   font-weight: 400;

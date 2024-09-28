@@ -10,9 +10,10 @@ import { Botao, Campo } from '../../styles'
 //5) tipar prop para adicionar o botao(voltar a lista de tarefas)
 // e passar o obj mostrarFiltros como argumento da barra lateral para fazer a condicao
 type Props = {
-  mostrarFiltros: boolean,
+  mostrarFiltros: boolean
 }
-const BarraLateral = ({ mostrarFiltros }: Props) => {  // aqui uso 'mostrarFiltros'
+const BarraLateral = ({ mostrarFiltros }: Props) => {
+  // aqui uso 'mostrarFiltros'
   //useNavigate : passar como  retorno da funcao do evento onCLick
   const navigate = useNavigate()
   // Apenas essas fontes:  dispatch(valor:termo) +
@@ -21,7 +22,7 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {  // aqui uso 'mostrarFiltr
   const { termo } = useSelector((state: RootReducer) => state.filtro)
 
   return (
-    < S.Aside >
+    <S.Aside>
       <div>
         {/*5) passar o obj tipado  mostrarFiltros para fazer a condicao */}
         {mostrarFiltros ? (
@@ -65,12 +66,10 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {  // aqui uso 'mostrarFiltr
           </>
         ) : (
           //Botao = estilo global
-          <Botao onClick={() => navigate('/')}>
-            Voltar à lista de Tarefas
-          </Botao>
+          <Botao onClick={() => navigate('/')}>Voltar à lista de Tarefas</Botao>
         )}
       </div>
-    </S.Aside >
+    </S.Aside>
   )
 }
 export default BarraLateral

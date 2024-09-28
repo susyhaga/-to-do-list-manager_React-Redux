@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import {Link} from 'react-router-dom' //botaoAdicionar
+import { Link } from 'react-router-dom' //botaoAdicionar
 import variaveis from '../../styles/varCoresBotoes'
 
-export const Circulo =styled(Link)`
+export const Circulo = styled(Link)`
   height: 64px;
   width: 64px;
   background: ${variaveis.verde};
@@ -12,7 +12,7 @@ export const Circulo =styled(Link)`
   right: 40px;
   font-family: Roboto;
   border-radius: 50%;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
