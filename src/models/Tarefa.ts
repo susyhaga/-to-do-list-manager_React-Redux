@@ -29,5 +29,4 @@ class Tarefa {
   }
 }
 
-export default Tarefa //usar na pasta reducers  como objeto a orientacao
-//da array de tarefas =  initialState:[]
+export default Tarefa //usar na pasta reducers  como objeto a orientacao da array de tarefas =  initialState:[]
